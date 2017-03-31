@@ -44,10 +44,15 @@ class ProductTest < ActiveSupport::TestCase
   	  end
   end
   
-  #Test using data from the fixtures
+  # Test using data from the fixtures
   test "product is not valid without a unique title" do
   	  product = Product.new(title: products(:ruby).title, description: "yyy", price: 1, image_url: "fred.gif")
   	  assert product.invalid?
+  	  
+  	  # Hard-coded error message 
   	  assert_equal ["has already been taken"], product.errors[:title]
+  	  
+  	  # Same error without hard-coding
+  	  assert_equal [I18n.translate('error.messages.taken')], product.errors(:title
   end
 end
