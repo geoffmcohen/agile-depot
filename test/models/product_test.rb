@@ -53,6 +53,6 @@ class ProductTest < ActiveSupport::TestCase
   	  assert_equal ["has already been taken"], product.errors[:title]
   	  
   	  # Same error without hard-coding
-  	  assert_equal [I18n.translate('error.messages.taken')], product.errors(:title
+  	  assert_equal [I18n.translate('errors.messages.taken')], product.errors[:title]
   end
 end
