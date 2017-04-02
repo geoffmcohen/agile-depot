@@ -31,7 +31,8 @@ class LineItemsController < ApplicationController
 
     respond_to do |format|
       if @line_item.save
-        format.html { redirect_to @line_item.cart }
+        format.html { redirect_to store_index_url }
+        format.js
         format.json { render :show, status: :created, location: @line_item }
       else
         format.html { render :new }
@@ -45,7 +46,7 @@ class LineItemsController < ApplicationController
   def update
     respond_to do |format|
       if @line_item.update(line_item_params)
-        format.html { redirect_to @line_item, notice: 'Line item was successfully updated.' }
+        format.html { redirect_to @line_item, notice: 'Line item was successfully updated.' }        
         format.json { render :show, status: :ok, location: @line_item }
       else
         format.html { render :edit }
@@ -59,7 +60,7 @@ class LineItemsController < ApplicationController
   def destroy
     @line_item.destroy
     respond_to do |format|      
-      format.html { redirect_to @line_item.cart, notice: "#{@line_item.product.title} was removed from your cart." }
+      format.html { redirect_to store_index_url, notice: "#{@line_item.product.title} was removed from your cart." }     
       format.json { head :no_content }
     end
   end
