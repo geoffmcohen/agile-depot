@@ -3,6 +3,8 @@
 <h2>Your Fruit Cart</h2>
 
 <table>
+	<%= render(@cart.line_items) %>
+<!--
 	<% @cart.line_items.each do |item| %>
 		<tr>
 			<td><%= item.quantity %>&times;</td>
@@ -11,6 +13,7 @@
 			<td><%= button_to 'Remove', item, method: :delete, data: { confirm: "Are you sure you want to delete #{item.product.title}?" } %> </td>
 		</tr>
 	<% end %>
+-->	
 	
 	<tr class="total_line">
 		<td colspan="2">Total</td>
