@@ -60,7 +60,8 @@ class LineItemsController < ApplicationController
   def destroy
     @line_item.destroy
     respond_to do |format|      
-      format.html { redirect_to store_index_url, notice: "#{@line_item.product.title} was removed from your cart." }     
+      format.html { redirect_to store_index_url }
+      format.js
       format.json { head :no_content }
     end
   end
