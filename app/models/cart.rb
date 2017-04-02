@@ -8,6 +8,10 @@ class Cart < ApplicationRecord
 		else
 			current_item = line_items.build(product_id: product.id)
 		end
+		
+		# Update the price to be the current price
+		current_item.price = product.price
+		
 		current_item
 	end
 	
