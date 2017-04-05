@@ -25,3 +25,6 @@
 
 #Ignore files with # at beginning and end from jEdit
 #*#
+
+# Ignore file with gmail account information
+/config/initializers/app_env_vars.rb

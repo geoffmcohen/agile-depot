@@ -54,4 +54,16 @@ Rails.application.configure do
   
   # Allow other hosts to access the channels
   config.action_cable.disable_request_forgery_protection = true
+  
+  # Send email via SMTP
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+	  address:              'smtp.gmail.com',
+	  port:                 587,
+	  domain:               'gmail.com',
+	  user_name:            ENV['MAILER_EMAIL'],
+	  password:             ENV['MAILER_PASSWORD'],
+	  authentication:       'plain',
+	  enable_starttls_auto: true  
+   }
 end
