@@ -5,9 +5,11 @@ one:
   cart: one
   price: 1
   quantity: 1
+  order: one
 
 two:
-  product: two
+  product: ruby
   cart: two
   price: 2
   quantity: 2
+  order: two
