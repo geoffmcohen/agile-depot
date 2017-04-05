@@ -42,4 +42,5 @@ Rails.application.configure do
   
   # Do not actual send emails out while testing
   config.action_mailer.delivery_method = :test
+  config.action_mailer.default_url_options = { :host => "test.yourhost.com" }
 end
