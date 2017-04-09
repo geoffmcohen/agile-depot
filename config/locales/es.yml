@@ -1,0 +1,33 @@
+es:
+  
+  number:
+    currency:
+      format:
+        unit: "$US"
+        precision: 2
+        separator: ","
+        delimiter: "."
+        format: "%n&nbsp;%u"
+        
+  layouts:
+    application:
+      title: "El Hogar de Fruta"
+      home: "Iniciio"
+      questions: "Preguntas"
+      news: "Noticias"
+      contact: "Contacto"
+      
+  store:
+    index:
+      title_html: "Frutas en Venta!!!"
+      add_html: "A&ntilde;adir al Carrito"
+          
+  carts:
+    cart:
+      title: "Carrito de la Compra"
+      empty: "Vacier Carrito"
+      checkout: "Comprar"
+      
+  line_items:
+    line_item:
+      remove: "Eliminar"
